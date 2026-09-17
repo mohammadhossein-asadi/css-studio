@@ -7,7 +7,11 @@
 A browser-based CSS development environment built with Next.js 16, React 19, and Tailwind CSS 4 — featuring real-time CSS editing with live preview, GSAP animations, color picking, and component export.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Coming_Soon-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=3b82f6)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](LICENSE)
+[![Next.js 16](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 </div>
 
@@ -117,15 +121,33 @@ npm run start
 
 ---
 
-## Author
+## Key Architecture Decisions
 
-**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+### Real-Time CSS Evaluation
+CSS is evaluated in a sandboxed iframe with `CSSStyleSheet.replaceSync()` for instant, secure preview without full page reloads.
 
-[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+### Design Token Generation
+CSS custom properties are extracted from the editor and exposed as a design token JSON, compatible with Style Dictionary and other token tools.
+
+### Component Export Pipeline
+Selected elements are serialized with their computed styles, cleaned of vendor prefixes, and wrapped in a React component template with TypeScript types.
+
+### GSAP Timeline Integration
+Pre-built animations are registered as GSAP timelines that can be scrubbed, reversed, and exported as standalone code snippets.
 
 ---
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+
+[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+
+</div>
