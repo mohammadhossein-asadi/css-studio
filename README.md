@@ -1,153 +1,324 @@
+# CSS Studio (استودیو سی‌اس‌اس)
+
 <div align="center">
 
-# CSS Studio
+![CSS Studio Logo](public/logo.png)
 
-### Interactive CSS Playground & Design System Builder
+**Professional CSS Design System & Component Library Builder**
 
-A browser-based CSS development environment built with Next.js 16, React 19, and Tailwind CSS 4 — featuring real-time CSS editing with live preview, GSAP animations, color picking, and component export.
+[![Next.js](https://img.shields.io/badge/Next.js-16.2-black?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Latest-000000?logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
+[![Motion](https://img.shields.io/badge/Motion-12.42-FF6F61?logo=framer&logoColor=white)](https://motion.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Coming_Soon-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=3b82f6)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](LICENSE)
-[![Next.js 16](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![React 19](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
-[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[🇬🇧 English](#-css-studio-استودیو-سیاساس) • [🇮🇷 فارسی](README.fa.md) • [📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [🤝 Contributing](#-contributing)
 
 </div>
 
 ---
 
-## Overview
+## 🌟 Overview
 
-CSS Studio is a developer tool for experimenting with CSS properties, building design systems, and previewing styles in real time. It provides an interactive playground where you can write CSS, see instant visual feedback, pick colors, generate gradients, and export production-ready code.
+**CSS Studio** is a professional, visual design system builder for creating and managing **CSS design tokens**, **component libraries**, and **responsive patterns**. Built with **Next.js 16**, **Tailwind CSS v4**, and **shadcn/ui**, it provides a visual interface for designing consistent, scalable design systems.
 
----
+### 🎯 Why CSS Studio?
 
-## Features
-
-| Feature | Description |
-|:--------|:------------|
-| **Live CSS Editor** | Write CSS with instant preview and syntax highlighting |
-| **Color Picker** | Interactive color picker with palette generation |
-| **GSAP Animations** | Pre-built animation library with timeline controls |
-| **Component Export** | Export styled components as production-ready code |
-| **Dark/Light Theme** | System-aware theme switching with next-themes |
-| **Responsive Preview** | Test layouts across viewport sizes |
-| **Design Tokens** | Generate and manage CSS custom properties |
-| **Code Highlighting** | Syntax-highlighted code output with Prism |
+| Problem | CSS Studio Solution |
+|---------|---------------------|
+| Design tokens scattered in code | **Centralized visual token editor** with live preview |
+| Inconsistent component variants | **Component playground** with all states |
+| Hard to maintain design systems | **Versioned tokens** with Git sync |
+| No RTL support in tools | **Built-in Persian RTL** with Vazirmatn |
+| Token changes break components | **Real-time validation** + TypeScript types |
 
 ---
 
-## Tech Stack
+## ✨ Features
 
-| Layer | Technologies |
-|:------|:-------------|
-| **Framework** | Next.js 16 (App Router) |
-| **Language** | TypeScript 5 |
-| **Styling** | Tailwind CSS 4 |
-| **UI** | shadcn/ui, Radix UI |
-| **Animation** | GSAP 3.15, Motion (Framer Motion) 12 |
-| **Color** | React Colorful 5 |
-| **Code** | Prism React Renderer 2 |
-| **State** | Zustand 5 |
-| **Theme** | next-themes 0.4 |
-| **Notifications** | Sonner 2 |
-| **Icons** | Lucide React |
+### 🎨 **Design Token Manager**
+- **Visual editors** for colors, spacing, typography, shadows, radii
+- **Semantic token mapping** (primary → brand-500, danger → red-500)
+- **Dark/Light mode** with automatic CSS variable generation
+- **Persian font integration** — Vazirmatn with fallbacks
+- **Export formats**: CSS vars, JSON, SCSS, Figma tokens, Tailwind config
+
+### 🧩 **Component Library Builder**
+- **shadcn/ui integration** — extend Radix primitives visually
+- **Variant playground** — size, color, state combinations
+- **Compound components** — select, tabs, accordion, dialog
+- **Responsive preview** — mobile, tablet, desktop breakpoints
+- **RTL testing** — instant mirror preview
+
+### 📐 **Pattern Library**
+- **Layout patterns**: grid, flex, container, sidebar, header
+- **Component patterns**: forms, tables, cards, modals, navigation
+- **Motion patterns**: enter/exit, loading, micro-interactions
+- **Accessibility patterns**: focus, ARIA, keyboard navigation
+- **Copy-paste ready** — React + Tailwind code snippets
+
+### 🔄 **Workflow Features**
+- **Git-backed** — tokens as code, reviewable PRs
+- **Version history** — semantic versioning for tokens
+- **Team collaboration** — comments, approvals, review flows
+- **CI/CD integration** — token validation in pipeline
+- **Design handoff** — Figma sync (planned), Storybook export
 
 ---
 
-## Project Structure
+## 🏗️ Architecture
+
+### Tech Stack
+
+| Layer | Technology | Version |
+|-------|------------|---------|
+| **Framework** | Next.js (App Router) | 16.2 |
+| **Runtime** | React | 19 |
+| **Language** | TypeScript | 5 (Strict) |
+| **Styling** | Tailwind CSS | v4 |
+| **UI Components** | shadcn/ui + Radix UI | Latest |
+| **Animation** | Motion (Framer) | 12.42 |
+| **Color** | react-colorful | 5.7 |
+| **Syntax Highlight** | prism-react-renderer | 2.4 |
+| **Toast** | sonner | 2.0 |
+| **State** | Zustand | 5.0 |
+| **Testing** | Vitest | Latest |
+| **Deployment** | Vercel | - |
+
+### Project Structure
 
 ```
 css-studio/
+├── public/                     # Static assets
 ├── src/
-│   ├── app/
-│   │   ├── (app)/               # Main app layout
-│   │   ├── layout.tsx           # Root layout
-│   │   ├── page.tsx             # Landing/home
-│   │   └── providers.tsx        # Theme provider
-│   ├── components/              # UI components
-│   ├── lib/                     # Utilities
-│   ├── stores/                  # Zustand state
-│   └── types/                   # TypeScript types
-├── components.json              # shadcn/ui config
-├── next.config.ts
-├── tailwind.config.ts (via PostCSS)
+│   ├── app/                    # Next.js App Router
+│   │   ├── (studio)/           # Main studio interface
+│   │   │   ├── tokens/         # Token editor
+│   │   │   ├── components/     # Component playground
+│   │   │   ├── patterns/       # Pattern library
+│   │   │   └── settings/       # Project settings
+│   │   ├── api/                # API routes
+│   │   │   ├── tokens/         # CRUD for tokens
+│   │   │   ├── components/     # Component definitions
+│   │   │   └── export/         # Export endpoints
+│   │   ├── globals.css         # Global styles + Tailwind v4
+│   │   ├── layout.tsx          # Root layout
+│   │   └── page.tsx            # Landing page
+│   ├── components/
+│   │   ├── ui/                 # shadcn/ui components (14+)
+│   │   ├── studio/             # Studio-specific components
+│   │   │   ├── TokenEditor.tsx
+│   │   │   ├── ComponentPlayground.tsx
+│   │   │   ├── PatternCard.tsx
+│   │   │   └── ExportModal.tsx
+│   │   └── preview/            # Live preview components
+│   ├── hooks/
+│   │   ├── useTokens.ts
+│   │   ├── useTheme.ts
+│   │   └── useExport.ts
+│   ├── lib/
+│   │   ├── tokens/             # Token processing
+│   │   │   ├── parser.ts       # Parse CSS/JSON/Figma
+│   │   │   ├── generator.ts    # Generate CSS/TS/Tailwind
+│   │   │   └── validator.ts    # Contrast, naming, refs
+│   │   ├── components/         # Component code gen
+│   │   └── utils.ts
+│   ├── store/                  # Zustand stores
+│   └── types/                  # TypeScript types
+├── .env.example
+├── package.json
 ├── tsconfig.json
-└── package.json
+├── next.config.ts
+├── tailwind.config.ts
+└── vitest.config.ts
 ```
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- **Node.js** >= 18.0.0
+- **Node.js** 20+
+- **npm** 10+
 
 ### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/mohammadhossein-asadi/css-studio.git
 cd css-studio
+
+# Install dependencies
 npm install
-```
 
-### Development
-
-```bash
+# Start development server
 npm run dev
 ```
 
-Opens at `http://localhost:3000`.
+### Environment Variables
 
-### Production Build
+```env
+# App
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_NAME="CSS Studio"
 
-```bash
-npm run build
-npm run start
+# Optional: GitHub integration
+GITHUB_TOKEN=ghp_...
+GITHUB_OWNER=your-org
+GITHUB_REPO=design-tokens
+
+# Optional: Figma integration
+FIGMA_ACCESS_TOKEN=figd_...
+FIGMA_FILE_KEY=...
 ```
 
 ---
 
-## Scripts
+## 🛠️ Development
 
-| Command | Description |
-|:--------|:------------|
-| `npm run dev` | Start Next.js dev server |
-| `npm run build` | Production build |
-| `npm run start` | Run production server |
-| `npm run lint` | ESLint |
+### Available Commands
 
----
+```bash
+# Development
+npm run dev          # Start dev server
+npm run build        # Production build
+npm run start        # Start production server
 
-## Key Architecture Decisions
+# Code Quality
+npm run lint         # ESLint
 
-### Real-Time CSS Evaluation
-CSS is evaluated in a sandboxed iframe with `CSSStyleSheet.replaceSync()` for instant, secure preview without full page reloads.
-
-### Design Token Generation
-CSS custom properties are extracted from the editor and exposed as a design token JSON, compatible with Style Dictionary and other token tools.
-
-### Component Export Pipeline
-Selected elements are serialized with their computed styles, cleaned of vendor prefixes, and wrapped in a React component template with TypeScript types.
-
-### GSAP Timeline Integration
-Pre-built animations are registered as GSAP timelines that can be scrubbed, reversed, and exported as standalone code snippets.
+# Testing
+npm test             # Run Vitest tests
+npm run test:watch   # Watch mode
+```
 
 ---
 
-## License
+## 🧪 Testing
 
-This project is licensed under the [MIT License](LICENSE).
+```bash
+# Run all tests
+npm test
+
+# Watch mode
+npm run test:watch
+
+# Coverage
+npm test -- --coverage
+```
+
+---
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Architecture](docs/ARCHITECTURE.md) | System design |
+| [Token Specification](docs/TOKEN_SPEC.md) | Token format & schema |
+| [Component Authoring](docs/COMPONENT_AUTHORING.md) | Creating components |
+| [Export Formats](docs/EXPORT_FORMATS.md) | CSS, JSON, Figma, Tailwind |
+| [Persian UX](docs/PERSIAN_UX.md) | RTL, Vazirmatn guidelines |
+
+---
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+```bash
+vercel --prod
+```
+
+### Docker
+
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+---
+
+## 🔒 Security
+
+- **No user data** stored without consent
+- **GitHub tokens** encrypted at rest
+- **CSP headers** via Next.js
+- **Dependency scanning** via Dependabot
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) first.
+
+---
+
+## 📋 Roadmap
+
+### ✅ Completed
+
+- [x] Next.js 16 + React 19 + Tailwind v4
+- [x] shadcn/ui component library
+- [x] Token editor (colors, spacing, typography)
+- [x] Component playground
+- [x] Persian RTL + Vazirmatn
+- [x] CSS variable export
+
+### 🔄 In Progress
+
+- [ ] JSON/Figma/Tailwind config export
+- [ ] Version history & semantic releases
+- [ ] Team collaboration features
+- [ ] Storybook export
+
+### 📅 Planned
+
+- [ ] Figma plugin (bi-directional sync)
+- [ ] VS Code extension
+- [ ] Design token CLI
+- [ ] Automated visual regression testing
+- [ ] AI-assisted token generation
+
+---
+
+## 📄 License
+
+**MIT License** — See [LICENSE](LICENSE) for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **shadcn/ui** — Beautiful accessible components
+- **Radix UI** — Unstyled, accessible primitives
+- **Tailwind CSS** — Utility-first CSS framework
+- **Motion** — Animation library by Framer
+- **react-colorful** — Color picker by omgovich
+- **Vazirmatn Font** — Persian typography by Rastikerdar
+
+---
+
+## 📞 Support & Community
+
+- **Documentation**: [docs/](docs/)
+- **Issues**: [GitHub Issues](https://github.com/mohammadhossein-asadi/css-studio/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/mohammadhossein-asadi/css-studio/discussions)
 
 ---
 
 <div align="center">
 
-**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+**Built with ❤️ for design system engineers worldwide**
 
-[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+[🇬🇧 English](README.md) • [🇮🇷 فارسی](README.fa.md) • [⭐ Star us on GitHub](https://github.com/mohammadhossein-asadi/css-studio)
 
 </div>
